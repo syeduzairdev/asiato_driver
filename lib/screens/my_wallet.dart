@@ -1,5 +1,6 @@
-import 'package:asiato_driver/contact_us.dart';
-import 'package:asiato_driver/help_center.dart';
+import 'package:asiato_driver/screens/contact_us.dart';
+import 'package:asiato_driver/screens/help_center.dart';
+import 'package:asiato_driver/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
 class my_wallet extends StatefulWidget {
@@ -10,10 +11,15 @@ class my_wallet extends StatefulWidget {
 }
 
 class _my_walletState extends State<my_wallet> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      key: _scaffoldKey,
+      endDrawer: Drawer(
+        elevation: 16.0,
+        child: drawer(),
+      ),
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
@@ -22,13 +28,13 @@ class _my_walletState extends State<my_wallet> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 15.0, left: 40.0),
-            child: IconButton(
-              icon: Icon(
+            child: GestureDetector(
+              onTap: () => _scaffoldKey.currentState!.openEndDrawer(),
+              child: Icon(
                 Icons.menu_outlined,
                 color: Colors.black,
                 size: 30.0,
               ),
-              onPressed: () {},
             ),
           ),
         ],

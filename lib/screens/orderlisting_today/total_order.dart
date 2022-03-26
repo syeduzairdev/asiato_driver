@@ -1,4 +1,4 @@
-import 'package:asiato_driver/earning_dashboard/earning_dashboard.dart';
+import 'package:asiato_driver/screens/earning_dashboard/earning_dashboard.dart';
 import 'package:flutter/material.dart';
 
 class total_order extends StatefulWidget {

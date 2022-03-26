@@ -1,4 +1,5 @@
-import 'package:asiato_driver/help_center.dart';
+import 'package:asiato_driver/screens/help_center.dart';
+import 'package:asiato_driver/widgets/drawer.dart';
 import 'package:asiato_driver/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -10,9 +11,15 @@ class contact_us extends StatefulWidget {
 }
 
 class _contact_usState extends State<contact_us> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
+      endDrawer: Drawer(
+        elevation: 16.0,
+        child: drawer(),
+      ),
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
@@ -22,13 +29,13 @@ class _contact_usState extends State<contact_us> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 15.0, left: 40.0),
-            child: IconButton(
-              icon: Icon(
+            child: GestureDetector(
+              onTap: () => _scaffoldKey.currentState!.openEndDrawer(),
+              child: Icon(
                 Icons.menu_outlined,
                 color: Colors.black,
                 size: 30.0,
               ),
-              onPressed: () {},
             ),
           ),
         ],

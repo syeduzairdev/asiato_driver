@@ -19,45 +19,93 @@ class _total_earningState extends State<total_earning> {
               SizedBox(
                 height: 10,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Container(
-                  height: 100,
-                  width: 180,
-                  decoration: new BoxDecoration(
-                      color: Color(0xffBC1C23),
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Today",
-                          style: TextStyle(color: Colors.white, fontSize: 17.0),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Container(
+                      height: 80,
+                      width: 150,
+                      decoration: new BoxDecoration(
+                          color: Color(0xffBC1C23),
+                          borderRadius: BorderRadius.circular(15)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Today",
+                              style: TextStyle(
+                                  color: Colors.white, fontSize: 12.0),
+                            ),
+                            SizedBox(
+                              height: 7,
+                            ),
+                            Text(
+                              "\$345.00",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12.0),
+                            ),
+                            SizedBox(
+                              height: 7,
+                            ),
+                            Text(
+                              "02 feb,2021",
+                              style: TextStyle(
+                                  color: Colors.white, fontSize: 12.0),
+                            ),
+                          ],
                         ),
-                        SizedBox(
-                          height: 7,
-                        ),
-                        Text(
-                          "\$345.00",
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 17.0),
-                        ),
-                        SizedBox(
-                          height: 7,
-                        ),
-                        Text(
-                          "02 feb,2021",
-                          style: TextStyle(color: Colors.white, fontSize: 17.0),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
-                ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Container(
+                      height: 80,
+                      width: 150,
+                      decoration: new BoxDecoration(
+                          color: Color(0xffCCCCCC),
+                          borderRadius: BorderRadius.circular(15)),
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Today",
+                              style: TextStyle(
+                                  color: Colors.white, fontSize: 12.0),
+                            ),
+                            SizedBox(
+                              height: 7,
+                            ),
+                            Text(
+                              "\$345.00",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12.0),
+                            ),
+                            SizedBox(
+                              height: 7,
+                            ),
+                            Text(
+                              "02 feb,2021",
+                              style: TextStyle(
+                                  color: Colors.white, fontSize: 12.0),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 10,
